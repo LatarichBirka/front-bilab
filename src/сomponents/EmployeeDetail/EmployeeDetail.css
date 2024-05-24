@@ -1,0 +1,78 @@
+/* EmployeeDetail.css */
+
+/* Flexbox container for layout adjustment */
+.employee-detail-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    background-color: #f8e9d2; /* Background color */
+    padding: 20px;
+    gap: 20px; /* Space between info and schedule sections */
+  }
+  
+  /* Employee info styling */
+  .employee-detail-info {
+    flex: 1; /* Take up remaining space */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .employee-detail-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make image circular */
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Employee schedule styling */
+  .employee-schedule {
+    flex: 2; /* Take up double the space of the info section */
+    text-align: center;
+    background-color: white; /* Background color for the schedule */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .schedule-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Define 7 columns for 7 days of the week */
+    gap: 10px;
+  }
+  
+  .schedule-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 4px;
+  }
+  
+  .schedule-day.working {
+    background-color: #f8e9d2; /* Background color for working days */
+  }
+  
+  .schedule-day.off {
+    background-color: white; /* Background color for off days */
+  }
+  
+  .day-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .time-range {
+    margin-bottom: 5px;
+  }
+  
+  .day-type {
+    font-size: 14px;
+    color: #555;
+  }
+  

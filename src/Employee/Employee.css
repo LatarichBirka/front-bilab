@@ -1,0 +1,77 @@
+.employee-container {
+    padding: 10px;
+    background-color: #f8e9d2;
+    font-family: 'Arial', sans-serif;
+    /* color: #800000; */
+  }
+  
+  
+  .header-with-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  .header-with-button h1 {
+    color: #800000;
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  
+  .schedule-link-button {
+    font-size: 1em;
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+
+  .schedule-link-button:hover,
+  .schedule-link-button:focus,
+  .schedule-link-button:active {
+    color: #555;
+    outline: none; /* Remove default focus outline */
+  }
+
+  .employee-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .employee-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: #800000;
+    display: block;
+  }
+
+  .employee-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .employee-name {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+
+
+
+
+
+
+ 

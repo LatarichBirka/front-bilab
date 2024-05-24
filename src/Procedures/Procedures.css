@@ -1,0 +1,62 @@
+.procedures-container {
+  /* color: #800000; */
+  font-family: 'Arial', sans-serif;
+  background-color: #f8e9d2; /* Цвет фона, как на странице процедур */
+  padding: 10px;
+}
+
+.procedures-container h1 {
+  color: #800000;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8e9d2; /* Цвет фона, как на странице процедур */
+  padding: 10px;
+}
+
+.procedures-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Сетка из трех колонок */
+  gap: 20px;
+}
+
+.procedure-card {
+  background-color: #ffffff; /* Белый фон для карточки */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для карточки */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.procedure-card:hover {
+  transform: translateY(-10px); /* Поднимаем карточку при наведении */
+}
+
+.procedure-link {
+  text-decoration: none;
+  color: inherit; /* Наследовать цвет текста */
+}
+
+.procedure-name {
+  font-size: 1.5em;
+  color: #800000; /* Темно-красный цвет для названия процедуры */
+  margin-bottom: 10px;
+}
+
+.procedure-price {
+  font-size: 1.2em;
+  color: #333; /* Тёмный цвет для цены */
+  margin-bottom: 20px;
+}
+
+.procedure-more {
+  font-size: 1em;
+  color: #800000; /* Темно-красный цвет для ссылки "Подробнее" */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.procedure-more:hover {
+  color: #b30000; /* Более яркий красный цвет при наведении */
+}
+
+

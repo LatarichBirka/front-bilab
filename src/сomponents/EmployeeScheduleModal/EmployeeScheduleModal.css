@@ -1,0 +1,53 @@
+/* EmployeeScheduleModal.css */
+
+.employee-schedule-modal .schedule-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .employee-schedule-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .employee-schedule-row .employee-name {
+    width: 150px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .schedule-days {
+    display: flex;
+  }
+  
+  .schedule-day {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .schedule-day.working {
+    background-color: #f8e9d2;
+  }
+  
+  .schedule-day.off {
+    background-color: white;
+  }
+  
+  .day-name {
+    font-weight: bold;
+  }
+  
+  .time-range {
+    margin: 5px 0;
+  }
+  
+  .day-type {
+    font-style: italic;
+  }
+  

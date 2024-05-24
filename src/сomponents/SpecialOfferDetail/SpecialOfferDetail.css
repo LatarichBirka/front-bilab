@@ -1,0 +1,79 @@
+.special-detail-background {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+  }
+  
+  .special-detail-container {
+    background-color: #f8e9d2;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .special-detail-content {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .special-detail-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .special-detail-text h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .special-detail-text p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .special-detail-button {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 50px; /* Adjust as necessary */
+    padding: 0 20px; /* Adjust as necessary */
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f8e9d2;
+    color: #d9534f;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .special-detail-button:hover,
+  .special-detail-button:focus,
+  .special-detail-button:active {
+    background-color: #d9534f;
+    color: white;
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .special-detail-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .special-detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

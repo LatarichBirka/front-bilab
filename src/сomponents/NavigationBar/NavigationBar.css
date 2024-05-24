@@ -1,0 +1,117 @@
+.navigation-bar {
+  position: fixed; /* Панель будет фиксирована в верхней части экрана */
+  width: 100%; /* Панель будет занимать всю ширину экрана */
+  top: 0; /* Панель будет размещена вверху экрана */
+  z-index: 1000; /* Панель будет выше других элементов на странице */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени */
+  font-family: 'Arial', sans-serif;
+  height: 120px; /* Высота панели */
+}
+
+.profile-link
+{
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #800000; /* Цвет логотипа */
+}
+
+.logo-image {
+  width: 100px; /* размер логотипа */
+  height: 100px; /* размер логотипа  */
+  margin-right: 10px; /* Отступ между логотипом и текстом */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.search-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.search-icon img {
+  width: 24px; /* Убедитесь, что размер иконки поиска корректный */
+  height: 24px;
+}
+
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001; /* Убедитесь, что модальное окно имеет более высокий z-index */
+}
+
+.search-modal-content {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.search-modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}

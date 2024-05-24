@@ -1,0 +1,83 @@
+.users-roles {
+  padding: 20px;
+}
+
+.users-roles h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.creation-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.creation-toggle label {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.creation-toggle input {
+  margin-right: 5px;
+}
+
+.users-roles form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.users-roles form input,
+.users-roles form select {
+  margin: 5px 0;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.users-roles form button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.users-roles form button:hover {
+  background-color: #2980b9;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-item {
+  background-color: #ecf0f1;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-item button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-item button:hover {
+  background-color: #bdc3c7;
+}

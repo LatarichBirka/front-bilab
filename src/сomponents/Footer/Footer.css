@@ -1,0 +1,63 @@
+.footer {
+  z-index: 1000; /* Ensure it appears above other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+  flex-shrink: 0; /* Ensure footer stays at the bottom */
+  position: relative; /* Ensure it stays at the bottom of the container */
+}
+
+
+.footer-address,
+.footer-contact,
+.footer-phone,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-address {
+  display: flex;
+  align-items: center;
+}
+
+.address-logo {
+  width: 24px; /* Размер логотипа */
+  height: 24px;
+  margin-right: 8px; /* Отступ между логотипом и текстом */
+}
+
+.footer-address .address-text,
+.footer-contact span,
+.footer-phone span {
+  font-size: 16px; /* Размер шрифта, как в NavigationBar */
+  color: #333;
+}
+
+.footer-contact .contact-email {
+  font-size: 16px; /* Размер шрифта, как в NavigationBar */
+  color: #a57b52; /* Цвет, подобный на изображении */
+  text-decoration: underline;
+}
+
+.footer-phone .phone-number {
+  font-size: 16px; /* Размер шрифта, как в NavigationBar */
+  color: #a57b52; /* Цвет, подобный на изображении */
+  text-decoration: underline;
+}
+
+.footer-social a {
+  margin: 5px 0;
+  text-decoration: none;
+  color: #800000; /* Цвет ссылок */
+  font-size: 16px; /* Размер шрифта, как в NavigationBar */
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #b30000; /* Цвет ссылок при наведении */
+}

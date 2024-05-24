@@ -1,0 +1,56 @@
+.admin-container {
+    display: flex;
+    min-height: calc(100vh - 200px); /* Adjust for the height of NavigationBar and Footer */
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f8e9d2;
+    padding: 20px;
+    position: fixed;
+    top: 120px; /* Adjust this value to the height of the navigation bar */
+    left: 0;
+    bottom: 0; /* Ensure the sidebar extends to the bottom */
+    overflow-y: auto; /* Make the sidebar scrollable */
+  }
+  
+  .sidebar h2 {
+    color: #8b0000;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li.logout {
+    color: #d9534f;
+  }
+  
+  .content {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+    min-height: calc(100vh - 200px); /* Adjust for the height of NavigationBar and Footer */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    background-color: #fff; /* Optional: background color for the content area */
+  }
+  
+  /* .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  } */
+  

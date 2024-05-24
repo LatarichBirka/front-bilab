@@ -1,0 +1,80 @@
+.procedures-offers {
+    padding: 20px;
+  }
+  
+  .procedures-offers h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .procedures-offers form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .procedures-offers form input,
+  .procedures-offers form select {
+    margin: 5px 0;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .procedures-offers form button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .procedures-offers form button:hover {
+    background-color: #2980b9;
+  }
+  
+  .procedure-list,
+  .special-offer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .procedure-item,
+  .special-offer-item {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .procedure-item button,
+  .special-offer-item button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .procedure-item .edit-button,
+  .special-offer-item .edit-button,
+  .procedure-item .delete-button,
+  .special-offer-item .delete-button {
+    border: 1px solid #ccc; /* Adding border to the buttons */
+  }
+  
+  .procedure-item button:hover,
+  .special-offer-item button:hover {
+    background-color: #bdc3c7;
+  }
+  
