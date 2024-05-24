@@ -65,7 +65,7 @@ const EmployeeDetail = () => {
             <Hollow />
             <div className="employee-detail-container">
                 <div className="employee-detail-info">
-                    <img src={employee.picture} alt={employee.firstName} className="employee-detail-image" />
+                    <img src={employee.avatarPath} alt={employee.firstName} className="employee-detail-image" />
                     <h2>{employee.firstName} {employee.lastName}</h2>
                     <p>{employee.description}</p> {/* Add other employee fields as needed */}
                 </div>

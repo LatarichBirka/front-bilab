@@ -51,7 +51,7 @@ const Employee = () => {
               pathname: `/employee/${employee.id}`,
               state: { employee } // Передача данных о сотруднике
             }} key={employee.id} className="employee-card">
-              <img src={employee.picture} alt={employee.firstName} className="employee-image" />
+              <img src={employee.avatarPath} alt={employee.firstName} className="employee-image" />
               <div className="employee-name">
                 {employee.firstName} {employee.lastName}
               </div>

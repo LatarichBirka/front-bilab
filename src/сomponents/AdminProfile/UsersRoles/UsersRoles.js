@@ -267,7 +267,7 @@ const UsersRoles = () => {
       <div className="user-list">
         {users.map((user) => (
           <div key={user.id} className="user-item">
-            <p>{user.firstName} {user.lastName} ({user.patronymic})</p>
+            <p>{user.firstName} {user.lastName} {user.patronymic}</p>
             <p>Email: {user.email}</p>
             <p>Phone: {user.phoneNumber}</p>
             <p>Role: {roles[user.id]}</p>

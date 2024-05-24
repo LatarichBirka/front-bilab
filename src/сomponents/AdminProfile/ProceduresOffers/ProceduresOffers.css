@@ -25,7 +25,7 @@
   
   .procedures-offers form button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #800000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -34,7 +34,7 @@
   }
   
   .procedures-offers form button:hover {
-    background-color: #2980b9;
+    background-color: #800000;
   }
   
   .procedure-list,
