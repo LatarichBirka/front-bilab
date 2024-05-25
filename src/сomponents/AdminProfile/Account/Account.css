@@ -1,0 +1,92 @@
+.account {
+    padding: 20px;
+  }
+  
+  .account-info {
+    display: flex;
+    align-items: center; /* Align items to center */
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .account-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+  }
+  
+  .account-details p {
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+    color: #800000;
+    font-size: 18px; /* Increase font size for more emphasis */
+  }
+  
+  .change-section h3 {
+    cursor: pointer;
+    color: #800000;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .change-section h3:hover {
+    color: #800000;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-width: 400px; /* Set a maximum width for the form */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form input,
+  form select {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Make inputs take the full width of the form */
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: fit-content; /* Fit button to content */
+    align-self: center; /* Center the button */
+  }
+  
+  form button:hover {
+    background-color: #800000;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: fit-content; /* Fit button to content */
+    align-self: center; /* Center the button */
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  

@@ -205,7 +205,7 @@ const ProceduresOffers = () => {
 
   return (
     <div className="procedures-offers">
-      <h2>Управление акциями</h2>
+      <h2>Управление процедурами</h2>
       <form onSubmit={handleProcedureSubmit}>
         <input
           type="text"

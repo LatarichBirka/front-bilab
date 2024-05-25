@@ -108,7 +108,7 @@ const Addresses = () => {
 
   return (
     <div className="addresses">
-      <h2>Manage Addresses</h2>
+      <h2>Управление адресами</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

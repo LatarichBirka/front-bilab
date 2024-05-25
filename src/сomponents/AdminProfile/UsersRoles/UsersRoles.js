@@ -166,7 +166,7 @@ const UsersRoles = () => {
 
   return (
     <div className="users-roles">
-      <h2>Manage Users and Employees</h2>
+      <h2>Управление клиентами и работниками</h2>
       <div className="creation-toggle">
         <label>
           <input
@@ -176,7 +176,7 @@ const UsersRoles = () => {
             checked={!isEmployee}
             onChange={() => setIsEmployee(false)}
           />
-          Create User
+          Создать клиента
         </label>
         <label>
           <input
@@ -186,7 +186,7 @@ const UsersRoles = () => {
             checked={isEmployee}
             onChange={() => setIsEmployee(true)}
           />
-          Create Employee
+          Создать работника
         </label>
       </div>
       <form onSubmit={handleSubmit}>

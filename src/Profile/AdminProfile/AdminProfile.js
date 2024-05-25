@@ -45,7 +45,7 @@ const AdminProfile = () => {
         <div className="sidebar">
           <h2>Личный кабинет</h2>
           <ul>
-            <li onClick={() => setActiveTab('account')}>Аккаунт</li>
+            <li onClick={() => setActiveTab('account')}>Мой профиль</li>
             <li onClick={() => setActiveTab('addresses')}>Адреса</li>
             <li onClick={() => setActiveTab('procedures')}>Процедуры и акции</li>
             <li onClick={() => setActiveTab('records')}>Записи</li>
