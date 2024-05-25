@@ -264,6 +264,7 @@ const UsersRoles = () => {
         />
         <button type="submit">{isUpdate ? 'Update User' : 'Create User/Employee'}</button>
       </form>
+      <h2>Список существующих пользователей</h2>
       <div className="user-list">
         {users.map((user) => (
           <div key={user.id} className="user-item">

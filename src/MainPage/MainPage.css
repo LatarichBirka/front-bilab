@@ -1,136 +1,136 @@
 .MainPage {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8e9d2; /* Цвет фона, как на странице процедур */
-    padding: 5px;
-  }
-  
-  .hero-section {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  
-  .hero-image {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-  }
-  
-  .hero-text {
-    position: absolute;
-    color: #7c0a02;
-    bottom: 20px; /* Отступ от нижней части изображения */
-    /* top: 20px; */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-  
-  .hero-text h1 {
-    color: #7c0a02;
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление тени */
-  }
-  
-  .hero-text p {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление тени */
-  }
-  
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background-color: #800000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .cta-button:hover {
-    background-color: #a00000;
-  }
-  
-  .services-section {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .services-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .services-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .service-item {
-    width: 300px;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .service-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .service-item h3 {
-    font-size: 24px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .service-item p {
-    font-size: 16px;
-  }
-  
-  .clinic-info-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 50px 20px;
-  }
-  
-  .clinic-image {
-    flex: 1 1 45%; /* Половина ширины */
-    max-width: 500px; /* Ограничение максимальной ширины */
-    text-align: left;
-    margin-right: 20px; /* Добавление отступа справа */
-  }
-  
-  .clinic-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .clinic-details {
-    flex: 1 1 50%; /* Половина ширины */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  .clinic-detail {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .clinic-detail h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .clinic-detail p {
-    font-size: 16px;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #f8e9d2; /* Цвет фона, как на странице процедур */
+  padding: 5px;
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.hero-text {
+  position: absolute;
+  color: #7c0a02;
+  bottom: 20px; /* Отступ от нижней части изображения */
+  /* top: 20px; */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  color: #7c0a02;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление тени */
+}
+
+.hero-text p {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление тени */
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #800000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #a00000;
+}
+
+.services-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 300px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 16px;
+}
+
+.clinic-info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.clinic-image {
+  flex: 1 1 45%; /* Половина ширины */
+  max-width: 500px; /* Ограничение максимальной ширины */
+  text-align: left;
+  margin-right: 20px; /* Добавление отступа справа */
+}
+
+.clinic-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Более скругленные углы */
+}
+
+.clinic-details {
+  flex: 1 1 50%; /* Половина ширины */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.clinic-detail {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.clinic-detail h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #7c0a02;
+}
+
+.clinic-detail p {
+  font-size: 16px;
+}
