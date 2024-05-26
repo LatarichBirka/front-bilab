@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Account.css';
+import {notification } from "antd";
 import noPhoto from './no_photo.jpg';
 
 const Account = () => {
@@ -85,11 +86,15 @@ const Account = () => {
           confirmNewPassword: formState.confirmNewPassword
         })
       });
-      const data = await response.json();
-      if (data.success) {
+      if (response.status === 204) {
         alert('Password changed successfully');
       } else {
-        console.error('Failed to change password');
+        const data = await response.json();
+        if (data.success) {
+          alert('Password changed successfully');
+        } else {
+          console.error('Failed to change password');
+        }
       }
     } catch (error) {
       console.error('Error changing password:', error);
@@ -109,11 +114,15 @@ const Account = () => {
           newEmail: formState.newEmail
         })
       });
-      const data = await response.json();
-      if (data.success) {
+      if (response.status === 204) {
         alert('Email changed successfully');
       } else {
-        console.error('Failed to change email');
+        const data = await response.json();
+        if (data.success) {
+          alert('Email changed successfully');
+        } else {
+          console.error('Failed to change email');
+        }
       }
     } catch (error) {
       console.error('Error changing email:', error);
@@ -122,6 +131,20 @@ const Account = () => {
 
   const handleAccountChange = async (e) => {
     e.preventDefault();
+    const dataToSend = {
+      id: accountInfo.id,
+      firstName: formState.firstName,
+      lastName: formState.lastName,
+      patronymic: formState.patronymic,
+      email: accountInfo.email,
+      password: '',
+      phoneNumber: formState.phoneNumber,
+      sex: parseInt(formState.sex, 10),
+      dateOfBirth: formState.dateOfBirth,
+      avatarPath: formState.avatarPath,
+      isNew: false
+    };
+    console.log(JSON.stringify(dataToSend));
     try {
       const response = await fetch('https://localhost:7235/api/User', {
         method: 'PUT',
@@ -129,25 +152,23 @@ const Account = () => {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${accessToken}`
         },
-        body: JSON.stringify({
-          id: accountInfo.id,
-          firstName: formState.firstName,
-          lastName: formState.lastName,
-          patronymic: formState.patronymic,
-          email: accountInfo.email,
-          password: '',
-          phoneNumber: formState.phoneNumber,
-          sex: formState.sex,
-          dateOfBirth: formState.dateOfBirth,
-          avatarPath: formState.avatarPath,
-          isNew: false
-        })
+        body: JSON.stringify(dataToSend)
       });
-      const data = await response.json();
-      if (data.success) {
-        alert('Account details updated successfully');
+      if (response.status === 204) {
+        notification.success({
+          message: "Success",
+          description:
+            "Данные профиля успешно обновлены! ",
+        });
+        fetchAccountInfo(); // Fetch updated account info
       } else {
-        console.error('Failed to update account details');
+        const data = await response.json();
+        if (data.success) {
+          alert('Account details updated successfully');
+          fetchAccountInfo(); // Fetch updated account info
+        } else {
+          console.error('Failed to update account details');
+        }
       }
     } catch (error) {
       console.error('Error updating account details:', error);
@@ -166,11 +187,15 @@ const Account = () => {
           email: accountInfo.email
         })
       });
-      const data = await response.json();
-      if (data.success) {
+      if (response.status === 204) {
         alert('Password reset email sent successfully');
       } else {
-        console.error('Failed to send password reset email');
+        const data = await response.json();
+        if (data.success) {
+          alert('Password reset email sent successfully');
+        } else {
+          console.error('Failed to send password reset email');
+        }
       }
     } catch (error) {
       console.error('Error sending password reset email:', error);
