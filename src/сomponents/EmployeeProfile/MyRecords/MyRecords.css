@@ -1,0 +1,133 @@
+.employee-profile-my-records {
+    padding: 20px;
+}
+
+.employee-profile-week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.employee-profile-week-records {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.employee-profile-day-records {
+    flex: 1;
+    min-width: 100px;
+    background-color: #f8e9d2;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employee-profile-day-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.employee-profile-record-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.employee-profile-intervalweek {
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+    color: #800000;
+    font-size: 18px;
+}
+
+.employee-profile-empty-record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.employee-profile-record-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.employee-profile-record-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.employee-profile-record-field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.employee-profile-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around; /* Space between buttons */
+}
+
+.employee-profile-actions button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.employee-profile-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.employee-profile-actions button:hover:enabled {
+    background-color: #b30000;
+}
+
+.employee-profile-error {
+    color: red;
+}
+
+.employee-profile-cancel-modal,
+.employee-profile-record-detail-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.employee-profile-cancel-modal textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.employee-profile-modal-actions {
+    display: flex;
+    justify-content: space-between;
+}

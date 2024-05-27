@@ -1,0 +1,127 @@
+.UserProfile-my-records {
+    padding: 20px;
+}
+
+.UserProfile-week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.UserProfile-week-records {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.UserProfile-day-records {
+    flex: 1;
+    min-width: 100px;
+    background-color: #f8e9d2;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UserProfile-day-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.UserProfile-record-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.UserProfile-intervalweek {
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+    color: #800000;
+    font-size: 18px;
+}
+
+.UserProfile-empty-record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.UserProfile-record-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.UserProfile-record-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.UserProfile-record-field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.UserProfile-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.UserProfile-actions button {
+    margin-right: 10px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.UserProfile-actions button:hover {
+    background-color: #b30000;
+}
+
+.UserProfile-error {
+    color: red;
+}
+
+.UserProfile-cancel-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.UserProfile-cancel-modal textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.UserProfile-modal-actions {
+    display: flex;
+    justify-content: space-between;
+}

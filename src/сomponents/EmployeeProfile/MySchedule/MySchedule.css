@@ -1,0 +1,55 @@
+.employeeprofile-employee-schedule {
+    padding: 20px;
+    text-align: center;
+}
+
+.employeeprofile-schedule-title {
+    font-size: 24px;
+    color: #8b0000;
+    margin-bottom: 20px;
+}
+
+.employeeprofile-schedule-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.employeeprofile-schedule-day {
+    background-color: #f8e9d2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.employeeprofile-schedule-day:hover {
+    transform: translateY(-5px);
+}
+
+.employeeprofile-schedule-day.employeeprofile-working {
+    background-color: #f8e9d2;
+}
+
+.employeeprofile-schedule-day.employeeprofile-off {
+    background-color: #ffffff;
+}
+
+.employeeprofile-day-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8b0000;
+}
+
+.employeeprofile-time-range {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #000;
+}
+
+.employeeprofile-day-type {
+    font-style: italic;
+    color: #555;
+}

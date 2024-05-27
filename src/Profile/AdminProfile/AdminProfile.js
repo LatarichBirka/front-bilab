@@ -43,7 +43,7 @@ const AdminProfile = () => {
       <Hollow />
       <div className="admin-container">
         <div className="sidebar">
-          <h2>Личный кабинет</h2>
+          <h2>Личный кабинет админа</h2>
           <ul>
             <li onClick={() => setActiveTab('account')}>Мой профиль</li>
             <li onClick={() => setActiveTab('addresses')}>Адреса</li>
