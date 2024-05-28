@@ -166,8 +166,9 @@ const MyRecords = () => {
                           onClick={(e) => { e.stopPropagation(); setCancelRecordId(record.id); }} 
                           disabled={record.isClosed || record.isCanceled}
                         >
-                          Отменить
+                          Отмена
                         </button>
+
                         <button 
                           onClick={(e) => { e.stopPropagation(); handleCloseRecord(record.id); }} 
                           disabled={record.isClosed || record.isCanceled}
@@ -202,15 +203,16 @@ const MyRecords = () => {
       {renderWeekRecords()}
       {cancelRecordId && (
         <div className="employee-profile-cancel-modal">
-          <h3>Отменить запись</h3>
+          <h3>Отмена записи</h3>
           <textarea
             value={cancelReason}
             onChange={(e) => setCancelReason(e.target.value)}
             placeholder="Причина отмены"
           />
+          <h3>Вы уверены, что хотите отменить?</h3>
           <div className="employee-profile-modal-actions">
-            <button onClick={() => handleCancelRecord(cancelRecordId)}>Подтвердить</button>
-            <button onClick={() => setCancelRecordId(null)}>Отмена</button>
+            <button onClick={() => handleCancelRecord(cancelRecordId)}>Да</button>
+            <button onClick={() => setCancelRecordId(null)}>Нет</button>
           </div>
         </div>
       )}

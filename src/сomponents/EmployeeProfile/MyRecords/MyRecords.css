@@ -83,16 +83,19 @@
 .employee-profile-actions {
     margin-top: 10px;
     display: flex;
-    justify-content: space-around; /* Space between buttons */
+    justify-content: space-between; /* Ensure space between buttons */
+    gap: 10px; /* Add gap between buttons */
 }
 
 .employee-profile-actions button {
     background-color: #800000;
     color: white;
     border: none;
-    padding: 5px 10px; /* Reduced padding */
+    padding: 8px 2px; /* Increased padding */
     border-radius: 5px;
     cursor: pointer;
+    flex: 1; /* Make buttons take equal space */
+    width: calc(50%); /* Adjust button width */
 }
 
 .employee-profile-actions button:disabled {
@@ -130,4 +133,25 @@
 .employee-profile-modal-actions {
     display: flex;
     justify-content: space-between;
+    gap: 10px; /* Add gap between buttons */
+}
+
+.employee-profile-modal-actions button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 8px 2px; /* Adjust padding */
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Make buttons take equal space */
+    width: calc(50%); /* Adjust button width */
+}
+
+.employee-profile-modal-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.employee-profile-modal-actions button:hover:enabled {
+    background-color: #b30000;
 }
