@@ -36,6 +36,7 @@ const SignIn = (props) => {
             if (data.value.accessToken) {
               // accessToken в локальное хранилище
               localStorage.setItem('accessToken', data.value.accessToken);
+              localStorage.setItem('refreshToken', data.value.refreshToken);
               localStorage.setItem('UserID', data.value.data.id);
               notification.success({
                 message: "Success",

@@ -129,7 +129,7 @@ const MyRecords = () => {
     return records.filter(record => {
       const recordDate = new Date(record.admissionDate);
       return recordDate >= startOfWeek && recordDate <= endOfWeek;
-    });
+    }).sort((a, b) => new Date(a.admissionDate) - new Date(b.admissionDate)); // Sort by admissionDate
   };
 
   const getWeekStart = () => {
