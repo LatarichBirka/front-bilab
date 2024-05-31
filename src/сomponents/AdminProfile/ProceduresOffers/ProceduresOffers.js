@@ -203,6 +203,11 @@ const ProceduresOffers = () => {
     }
   };
 
+  const getSpecialOfferDetailById = (id) => {
+    const offer = specialOffers.find(offer => offer.id === id);
+    return offer ? offer.detail : 'Нет акции';
+  };
+
   return (
     <div className="procedures-offers">
       <h2>Управление процедурами</h2>
@@ -244,7 +249,7 @@ const ProceduresOffers = () => {
           value={procedureFormState.specialOfferId}
           onChange={handleProcedureInputChange}
         >
-          <option value="">Select Special Offer</option>
+          <option value="">Выбор акции</option>
           {specialOffers.map((offer) => (
             <option key={offer.id} value={offer.id}>
               {offer.detail}
@@ -259,9 +264,9 @@ const ProceduresOffers = () => {
           <div key={procedure.id} className="procedure-item">
             <p>{procedure.name}</p>
             <p>{procedure.description}</p>
-            <p>Type: {procedure.type}</p>
-            <p>Price: {procedure.price}</p>
-            <p>Special Offer ID: {procedure.specialOfferId}</p>
+            <p>Тип: {procedure.type}</p>
+            <p>Цена: {procedure.price}</p>
+            <p>Акция: {getSpecialOfferDetailById(procedure.specialOfferId)}</p>
             <button className="edit-button" onClick={() => handleProcedureEdit(procedure)}>Edit</button>
             <button className="delete-button" onClick={() => handleProcedureDelete(procedure.id)}>Delete</button>
           </div>
@@ -292,7 +297,7 @@ const ProceduresOffers = () => {
         {specialOffers.map((offer) => (
           <div key={offer.id} className="special-offer-item">
             <p>{offer.detail}</p>
-            <p>New Price: {offer.newPrice}</p>
+            <p>Цена по акции: {offer.newPrice}</p>
             <button className="edit-button" onClick={() => handleSpecialOfferEdit(offer)}>Edit</button>
             <button className="delete-button" onClick={() => handleSpecialOfferDelete(offer.id)}>Delete</button>
           </div>

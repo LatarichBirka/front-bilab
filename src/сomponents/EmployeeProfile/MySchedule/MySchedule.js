@@ -42,12 +42,12 @@ const MySchedule = () => {
         });
 
         return sortedSchedule.map((day, index) => (
-            <div key={index} className={`employeeprofile-schedule-day ${day.typeOfDayId === '4124786d-1808-4c44-4fe2-08dc7953814d' ? 'employeeprofile-working' : 'employeeprofile-off'}`}>
+            <div key={index} className={`employeeprofile-schedule-day ${day.typeOfDayId === '1bc7d2a1-0080-476b-f361-08dc80d6707c' ? 'employeeprofile-working' : 'employeeprofile-off'}`}>
                 <div className="employeeprofile-day-name">{daysMap[day.dayOfWeek]}</div>
-                {day.typeOfDayId === '4124786d-1808-4c44-4fe2-08dc7953814d' && (
+                {day.typeOfDayId === '1bc7d2a1-0080-476b-f361-08dc80d6707c' && (
                     <div className="employeeprofile-time-range">{day.fromTime}:00-{day.toTimeTime}:00</div>
                 )}
-                <div className="employeeprofile-day-type">{day.typeOfDayId === '4124786d-1808-4c44-4fe2-08dc7953814d' ? 'Прием' : 'Выходной'}</div>
+                <div className="employeeprofile-day-type">{day.typeOfDayId === '1bc7d2a1-0080-476b-f361-08dc80d6707c' ? 'Прием' : 'Выходной'}</div>
             </div>
         ));
     };

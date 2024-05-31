@@ -48,11 +48,19 @@
   .employee-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     text-decoration: none;
     color: #800000;
     display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для карточки */
+    /* text-align: center; */
+    transition: transform 0.3s ease;
+    outline: none;
+  }
+
+  .employee-card:hover {
+    color: #b30000;
+    transform: translateY(-10px); /* Поднимаем карточку при наведении */
   }
 
   .employee-image {
