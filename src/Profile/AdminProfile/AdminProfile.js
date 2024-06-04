@@ -48,7 +48,7 @@ const AdminProfile = () => {
             <li onClick={() => setActiveTab('account')}>Мой профиль</li>
             <li onClick={() => setActiveTab('addresses')}>Адреса</li>
             <li onClick={() => setActiveTab('procedures')}>Процедуры и акции</li>
-            <li onClick={() => setActiveTab('records')}>Отчётность записей</li>
+            <li onClick={() => setActiveTab('records')}>Отчётность заявок</li>
             <li onClick={() => setActiveTab('usersRoles')}>Пользователи и их роли</li>
             <li onClick={() => setActiveTab('schedules')}>Графики работников</li>
             <li className="logout" onClick={handleLogout}>Выйти</li>

@@ -24,6 +24,14 @@
   color: red;
 }
 
+.financial-report {
+  margin-bottom: 20px;
+}
+
+.financial-report p {
+  margin: 5px 0;
+}
+
 .records-list {
   display: flex;
   flex-wrap: wrap;

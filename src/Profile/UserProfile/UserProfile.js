@@ -34,7 +34,7 @@ const UserProfile = () => {
           <h2>Личный кабинет клиента</h2>
           <ul>
             <li onClick={() => setActiveTab('account')}>Мой профиль</li>
-            <li onClick={() => setActiveTab('myRecords')}>Мои записи</li>
+            <li onClick={() => setActiveTab('myRecords')}>Мои Заявки</li>
             <li className="logout" onClick={handleLogout}>Выйти</li>
           </ul>
         </div>

@@ -29,12 +29,12 @@ const MyRecords = () => {
         setRecords(data.value);
         setError('');
       } else {
-        setError('Записи отсутствуют.');
+        setError('Заявки отсутствуют.');
         setRecords([]);
       }
     } catch (error) {
-      console.error('Ошибка при получении записей:', error);
-      setError('Ошибка при получении записей');
+      console.error('Ошибка при получении заявок:', error);
+      setError('Ошибка при получении заявок');
       setRecords([]);
     }
   };
@@ -56,7 +56,7 @@ const MyRecords = () => {
       if (response.status === 204) {
         notification.success({
           message: "Успех",
-          description: "Запись успешно отменена!",
+          description: "Заявка успешно отменена!",
         });
         updateRecordStatus(recordId);
       } else {
@@ -64,15 +64,15 @@ const MyRecords = () => {
         if (data.success) {
           notification.success({
             message: "Успех",
-            description: "Запись успешно отменена!",
+            description: "Заявка успешно отменена!",
           });
           updateRecordStatus(recordId);
         } else {
-          console.error('Не удалось отменить запись');
+          console.error('Не удалось отменить Заявка');
         }
       }
     } catch (error) {
-      console.error('Ошибка при отмене записи:', error);
+      console.error('Ошибка при отмене Заявки:', error);
     }
     setCancelRecordId(null);
     setCancelReason('');
@@ -126,23 +126,23 @@ const MyRecords = () => {
                           <div className="UserProfile-record-info">
                             <p className="UserProfile-record-field"><strong>Дата приёма:</strong></p>
                             <p className="UserProfile-record-field">{new Date(record.admissionDate).toLocaleString()}</p>
-                            {record.detail && (<>
+                            {/* {record.detail && (<>
                             <p className="UserProfile-record-field"><strong>Ваш комментарий:</strong></p>
                             <p className="UserProfile-record-field">{record.detail}</p>
                             </>
-                            )}
-                            <p className="UserProfile-record-field"><strong>Название процедуры:</strong></p>
+                            )} */}
+                            <p className="UserProfile-record-field"><strong>Процедура:</strong></p>
                             <p className="UserProfile-record-field">{record.procedure.name}</p>
                             <p className="UserProfile-record-field"><strong>Цена:</strong></p>
                             <p className="UserProfile-record-field">{record.procedure.price} руб.</p>
                             <p className="UserProfile-record-field"><strong>Адрес:</strong></p>
                             <p className="UserProfile-record-field">{record.adress}</p>
-                            <p className="UserProfile-record-field"><strong>Состояние:</strong></p>
-                            <p className="UserProfile-record-field">{record.isClosed ? (record.isCanceled ? 'Отменена' : 'Закрыта') : 'В процессе'}</p>
+                            {/* <p className="UserProfile-record-field"><strong>Состояние:</strong></p>
+                            <p className="UserProfile-record-field">{record.isClosed ? (record.isCanceled ? 'Отменена' : 'Закрыта') : 'В процессе'}</p> */}
                           </div>
                           {!record.isClosed && (
                             <div className="UserProfile-actions">
-                              <button onClick={() => setCancelRecordId(record.id)}>Отменить запись</button>
+                              <button onClick={() => setCancelRecordId(record.id)}>Отменить заявку</button>
                             </div>
                           )}
                         </div>
@@ -164,7 +164,7 @@ const MyRecords = () => {
                   ))
                 ) : (
                   <div className="UserProfile-record-item UserProfile-empty-record">
-                    <p>Нет записей</p>
+                    <p>Нет заявок</p>
                   </div>
                 )}
               </div>
@@ -177,7 +177,7 @@ const MyRecords = () => {
 
   return (
     <div className="UserProfile-my-records">
-      <h2>Мои записи</h2>
+      <h2>Мои Заявки</h2>
       <div className="UserProfile-week-navigation">
         <button onClick={() => setWeekOffset(weekOffset - 1)}>Предыдущая неделя</button>
         <span className="UserProfile-intervalweek">{getFormattedDateRange(getWeekStart())}</span>
@@ -187,7 +187,7 @@ const MyRecords = () => {
       {renderWeekRecords()}
       {cancelRecordId && (
         <div className="UserProfile-cancel-modal">
-          <h3>Отменить запись</h3>
+          <h3>Отменить Заявка</h3>
           <textarea
             value={cancelReason}
             onChange={(e) => setCancelReason(e.target.value)}

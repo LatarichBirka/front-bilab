@@ -27,15 +27,16 @@ const MyRecords = () => {
       });
       const data = await response.json();
       if (data.success && data.value.length > 0) {
+        console.log("Fetched Records:", data.value);
         setRecords(data.value);
         setError('');
       } else {
-        setError('Записи отсутствуют.');
+        setError('Заявки отсутствуют.');
         setRecords([]);
       }
     } catch (error) {
-      console.error('Ошибка при получении записей:', error);
-      setError('Ошибка при получении записей');
+      console.error('Ошибка при получении заявок:', error);
+      setError('Ошибка при получении заявок');
       setRecords([]);
     }
   };
@@ -57,7 +58,7 @@ const MyRecords = () => {
       if (response.status === 204) {
         notification.success({
           message: "Успех",
-          description: "Запись успешно отменена!",
+          description: "Заявка успешно отменена!",
         });
         updateRecordStatus(recordId, true, false);
       } else {
@@ -65,15 +66,15 @@ const MyRecords = () => {
         if (data.success) {
           notification.success({
             message: "Успех",
-            description: "Запись успешно отменена!",
+            description: "Заявка успешно отменена!",
           });
           updateRecordStatus(recordId, true, false);
         } else {
-          console.error('Не удалось отменить запись');
+          console.error('Не удалось отменить Заявка');
         }
       }
     } catch (error) {
-      console.error('Ошибка при отмене записи:', error);
+      console.error('Ошибка при отмене Заявки:', error);
     }
     setCancelRecordId(null);
     setCancelReason('');
@@ -96,7 +97,7 @@ const MyRecords = () => {
       if (response.status === 204) {
         notification.success({
           message: "Успех",
-          description: "Запись успешно закрыта!",
+          description: "Заявка успешно закрыта!",
         });
         updateRecordStatus(recordId, false, true);
       } else {
@@ -104,15 +105,15 @@ const MyRecords = () => {
         if (data.success) {
           notification.success({
             message: "Успех",
-            description: "Запись успешно закрыта!",
+            description: "Заявка успешно закрыта!",
           });
           updateRecordStatus(recordId, false, true);
         } else {
-          console.error('Не удалось закрыть запись');
+          console.error('Не удалось закрыть Заявка');
         }
       }
     } catch (error) {
-      console.error('Ошибка при закрытии записи:', error);
+      console.error('Ошибка при закрытии Заявки:', error);
     }
     setCancelRecordId(null);
   };
@@ -126,15 +127,22 @@ const MyRecords = () => {
   const getWeekRecords = (startOfWeek) => {
     const endOfWeek = new Date(startOfWeek);
     endOfWeek.setDate(endOfWeek.getDate() + 6);
-    return records.filter(record => {
+    endOfWeek.setHours(23, 59, 59, 999); // Set end of week to 23:59:59.999
+    const filteredRecords = records.filter(record => {
       const recordDate = new Date(record.admissionDate);
+      console.log("Checking record date:", recordDate, "Start of week:", startOfWeek, "End of week:", endOfWeek);
       return recordDate >= startOfWeek && recordDate <= endOfWeek;
-    }).sort((a, b) => new Date(a.admissionDate) - new Date(b.admissionDate)); // Sort by admissionDate
+    }).sort((a, b) => new Date(a.admissionDate) - new Date(b.admissionDate));
+    console.log("Week Records:", filteredRecords);
+    return filteredRecords;
   };
 
   const getWeekStart = () => {
     const startOfWeek = new Date();
-    startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay() + 1 + weekOffset * 7);
+    const today = startOfWeek.getDate();
+    startOfWeek.setDate(today - startOfWeek.getDay() + 1 + weekOffset * 7);
+    startOfWeek.setHours(0, 0, 0, 0); // Ensure we start at the beginning of the day
+    console.log("Start of Week:", startOfWeek);
     return startOfWeek;
   };
 
@@ -152,7 +160,11 @@ const MyRecords = () => {
     return (
       <div className="employee-profile-week-records">
         {daysOfWeek.map((day, index) => {
-          const dayRecords = weekRecords.filter(record => new Date(record.admissionDate).getDay() === (index + 1) % 7);
+          const dayRecords = weekRecords.filter(record => {
+            const recordDate = new Date(record.admissionDate);
+            return recordDate.getDay() === (index + 1) % 7;
+          });
+          console.log(`Records for ${day}:`, dayRecords);
           return (
             <div key={index} className="employee-profile-day-records">
               <h3>{day}</h3>
@@ -180,7 +192,7 @@ const MyRecords = () => {
                   ))
                 ) : (
                   <div className="employee-profile-record-item employee-profile-empty-record">
-                    <p>Нет записей</p>
+                    <p>Нет заявок</p>
                   </div>
                 )}
               </div>
@@ -193,7 +205,7 @@ const MyRecords = () => {
 
   return (
     <div className="employee-profile-my-records">
-      <h2>Мои записи</h2>
+      <h2>Мои Заявки</h2>
       <div className="employee-profile-week-navigation">
         <button onClick={() => setWeekOffset(weekOffset - 1)}>Предыдущая неделя</button>
         <span className="employee-profile-intervalweek">{getFormattedDateRange(getWeekStart())}</span>
@@ -203,7 +215,7 @@ const MyRecords = () => {
       {renderWeekRecords()}
       {cancelRecordId && (
         <div className="employee-profile-cancel-modal">
-          <h3>Отмена записи</h3>
+          <h3>Отмена Заявки</h3>
           <textarea
             value={cancelReason}
             onChange={(e) => setCancelReason(e.target.value)}
@@ -218,7 +230,7 @@ const MyRecords = () => {
       )}
       {selectedRecord && (
         <div className="employee-profile-record-detail-modal">
-          <h3>Детали записи</h3>
+          <h3>Детали Заявки</h3>
           <div className="employee-profile-record-info">
             <p><strong>Дата приёма:</strong> {new Date(selectedRecord.admissionDate).toLocaleString()}</p>
             <p><strong>Полное имя клиента:</strong> {`${selectedRecord.customer.lastName} ${selectedRecord.customer.firstName} ${selectedRecord.customer.patronymic}`}</p>
@@ -226,7 +238,7 @@ const MyRecords = () => {
             <p><strong>Email клиента:</strong> {selectedRecord.customer.email}</p>
             {selectedRecord.detail && (
               <>
-                <p><strong>Комментарий клинета:</strong> {selectedRecord.detail}</p>
+                <p><strong>Комментарий клиента:</strong> {selectedRecord.detail}</p>
               </>
             )}
             <p><strong>Название процедуры:</strong> {selectedRecord.procedure.name}</p>

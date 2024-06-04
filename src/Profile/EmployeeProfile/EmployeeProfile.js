@@ -37,7 +37,7 @@ const EmployeeProfile = () => {
           <h2>Личный кабинет работника</h2>
           <ul>
             <li onClick={() => setActiveTab('account')}>Мой профиль</li>
-            <li onClick={() => setActiveTab('myRecords')}>Мои записи</li>
+            <li onClick={() => setActiveTab('myRecords')}>Мои Заявки</li>
             <li onClick={() => setActiveTab('mySchedule')}>Мой график</li>
             <li className="logout" onClick={handleLogout}>Выйти</li>
           </ul>

@@ -18,10 +18,10 @@ import EmployeeDetail from './сomponents/EmployeeDetail/EmployeeDetail';
 // import NavigationBar from './components/NavigationBar/NavigationBar';
 
 function App(props) {
-  useEffect(() => {
-    // Clear local storage when the application starts
-    localStorage.clear();
-  }, []); // Empty dependency array ensures this runs only once
+  // useEffect(() => {
+  //   // Clear local storage when the application starts
+  //   localStorage.clear();
+  // }, []); // Empty dependency array ensures this runs only once
   
   return (
     <div className="App">

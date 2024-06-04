@@ -61,7 +61,7 @@ const ProcedureDetail = () => {
     const adressId = values.Adress
     const detail = values.details
     const customerId = localStorage.getItem('UserID');
-    const admissionDate = values.date.format('YYYY-MM-DD') + "T" + values.time + ":00:00";
+    const admissionDate = values.date.format('YYYY-MM-DD') + "T" + (parseInt(values.time) < 10 ? "0" + values.time : values.time) + ":00:00";
     const dataToSend = { id: "3fa85f64-5717-4562-b3fc-2c963f66afa6", employerId, adressId, detail, procedureId, customerId, admissionDate
      };
     console.log(dataToSend)
@@ -86,7 +86,7 @@ const ProcedureDetail = () => {
       notification.success({
         message: "Success",
         description:
-          "Вы успешно записались, пожалуйста, ожидайте звонка за день до даты записи ",
+          "Вы успешно оставили заявкку, пожалуйста, ожидайте звонка за день до даты Заявки ",
       });
       setLoading(false);
     })
@@ -188,7 +188,7 @@ const ProcedureDetail = () => {
             <h1>{procedure.name}</h1>
             <p>{procedure.description}</p>
             <Button type="primary" onClick={handleRecordAppointment} className="procedure-detail-button">
-              Записаться
+              Оставить заявку
             </Button>
           </div>
           <div className="procedure-detail-image">
@@ -198,9 +198,9 @@ const ProcedureDetail = () => {
       </div>
       <Footer />
 
-      <Modal title="Запись к специалуисту" open={isModalVisible} onCancel={handleCancel} footer={null}>
+      <Modal title="Заявка к специалисту" open={isModalVisible} onCancel={handleCancel} footer={null}>
         <Form form={form} layout="vertical" onFinish={handleFormSubmit}>
-          <Form.Item name="date" label="Дата записи" rules={[{ required: true, message: 'Пожалуйста, выберите дату!' }]}>
+          <Form.Item name="date" label="Дата Заявки" rules={[{ required: true, message: 'Пожалуйста, выберите дату!' }]}>
             <DatePicker style={{ width: '100%' }} allowClear={false} onChange={handleDateChange} />
           </Form.Item>
           <Form.Item name="employee" label="Работник" rules={[{ required: true, message: 'Пожалуйста, выберите работника!' }]}>
@@ -217,7 +217,7 @@ const ProcedureDetail = () => {
               ))}
             </Select>
           </Form.Item>
-          <Form.Item name="time" label="Время записи почасовое" rules={[{ required: true, message: 'Пожалуйста, выберите время!' }]}>
+          <Form.Item name="time" label="Время Заявки почасовое" rules={[{ required: true, message: 'Пожалуйста, выберите время!' }]}>
             <Select>
               {times.map(time => (
                 <Select.Option key={time.fromTime} value={time.fromTime}>

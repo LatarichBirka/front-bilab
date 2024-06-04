@@ -98,7 +98,7 @@ const SpecialOfferDetail = () => {
       notification.success({
         message: "Success",
         description:
-          "Вы успешно записались, пожалуйста, ожидайте звонка за день до даты записи ",
+          "Вы успешно оставили заявкку, пожалуйста, ожидайте звонка за день до даты Заявки ",
       });
       setLoading(false);
     })
@@ -193,7 +193,7 @@ const SpecialOfferDetail = () => {
             <p>{procedure.detail}</p>
             <p>По сниженной цене - {procedure.newPrice}</p>
             <Button type="primary" onClick={handleRecordAppointment} className="special-detail-button">
-              Записаться
+              Оставить заявку
             </Button>
           </div>
           <div className="special-detail-image">
@@ -203,9 +203,9 @@ const SpecialOfferDetail = () => {
       </div>
       <Footer />
 
-      <Modal title="Запись к специалуисту" open={isModalVisible} onCancel={handleCancel} footer={null}>
+      <Modal title="Заявка к специалисту" open={isModalVisible} onCancel={handleCancel} footer={null}>
         <Form form={form} layout="vertical" onFinish={handleFormSubmit}>
-          <Form.Item name="date" label="Дата записи" rules={[{ required: true, message: 'Пожалуйста, выберите дату!' }]}>
+          <Form.Item name="date" label="Дата Заявки" rules={[{ required: true, message: 'Пожалуйста, выберите дату!' }]}>
             <DatePicker style={{ width: '100%' }} allowClear={false} onChange={handleDateChange} />
           </Form.Item>
           <Form.Item name="employee" label="Работник" rules={[{ required: true, message: 'Пожалуйста, выберите работника!' }]}>
@@ -222,7 +222,7 @@ const SpecialOfferDetail = () => {
               ))}
             </Select>
           </Form.Item>
-          <Form.Item name="time" label="Время записи почасовое" rules={[{ required: true, message: 'Пожалуйста, выберите время!' }]}>
+          <Form.Item name="time" label="Время Заявки почасовое" rules={[{ required: true, message: 'Пожалуйста, выберите время!' }]}>
             <Select>
               {times.map(time => (
                 <Select.Option key={time.fromTime} value={time.fromTime}>
